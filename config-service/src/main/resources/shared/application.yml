@@ -1,0 +1,122 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.1.150:1521:DB
+    username:
+    password:
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    generate-ddl: false
+    show-sql: true
+  jackson:
+      serialization:
+        INDENT_OUTPUT: true
+  main:
+    allow-bean-definition-overriding: true
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        secret: mantraERP12252***
+        key-value: -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvul5CPaFimvlp7ebf3k7
+          lN+pfHwz9puqhPTake+luZ7bnjKtqwyyKZllkNoiAMaxVjXM2tXhivQ95KfTZmOI
+          TOEiZ2OuicR4PW70z+4gMnsBL4++1CMi4xMLt1oPzA4ITddpJ/xYP96pJYTZr57+
+          wgd0XlKwID6b4FEexu9FyO7EraeP44wDvpBCf2i4XDBs2bszceHnOKT/cnU3cIkX
+          vo03QtPpROEFJlWZHffnZ+V+tBRC0/j2v7TkUiGogXBUZOnsVuBwP4uiPa69nlUD
+          NeZllaZlo4Sox/ZCZ1K6Sgh4y62vUcXIhEPjy89nZ6S3u5RVKJvfZ3xXLIPmRAXo
+          XwIDAQAB
+          -----END PUBLIC KEY-----
+    client:
+      id: mantra
+      client-secret: mantraERP12252***
+      access-token-validity-seconds: 3600
+      refresh-token-validity-seconds: 86400
+      privateKey: -----BEGIN RSA PRIVATE KEY-----
+        MIIEpAIBAAKCAQEAvul5CPaFimvlp7ebf3k7lN+pfHwz9puqhPTake+luZ7bnjKt
+        qwyyKZllkNoiAMaxVjXM2tXhivQ95KfTZmOITOEiZ2OuicR4PW70z+4gMnsBL4++
+        1CMi4xMLt1oPzA4ITddpJ/xYP96pJYTZr57+wgd0XlKwID6b4FEexu9FyO7EraeP
+        44wDvpBCf2i4XDBs2bszceHnOKT/cnU3cIkXvo03QtPpROEFJlWZHffnZ+V+tBRC
+        0/j2v7TkUiGogXBUZOnsVuBwP4uiPa69nlUDNeZllaZlo4Sox/ZCZ1K6Sgh4y62v
+        UcXIhEPjy89nZ6S3u5RVKJvfZ3xXLIPmRAXoXwIDAQABAoIBAQCT5SaAjQmyzBdj
+        MFfkDrTbhdE0wLs4pisZSN4yA+bsv2X/Td9ADVvP4ifOaU3CMCqdUJxcQyiwjrmL
+        839PaHfkptwSICTMUUmcveIlWqHSuXuXrtH0YSvboZuH9NscBxrjwqaR9WkgQYvj
+        puFErfVJtqCtmX0b3aS/x9gB4Ma8+vRM0JwvTLq7S1u+ijYC+fnvCQs8iEz9fir/
+        iQVTHOa+EHARcNpe3E7wRR1jG2Uk3UcWncD8naKv+/+8xcLD8J5fV5dxPADsiTfZ
+        bl05G3sfaax5ub5L4t75NoEK/7jLqCBZrVS79h746UeIH0G7gDXup+CsaI+C2MoF
+        9d+9BLVhAoGBAOyhSV00Wl8SGiWx3zPMILzwP+zHPDZRU/6TpwgvUr2cRJcV0Izb
+        6ENmoyRKXT41Sl6TQF9X/Xs0egwLDd2wzZFAcfmdhjCgBmIo55D5hkF7pGS+Mr8A
+        PSjzMQp851DbJ6tWGvAIO1CWykfktAp8fEs4iC1NlIYs5pyteuVJu58JAoGBAM6K
+        I8MgvjQeRtxIEQNU2qWrxLOLCLcOaLCblKrPzwuRu9pN/EW7I20a5InnCI12pTC1
+        P/+g+t718VGXt5HtwN+kWk4l0PRmDqRrrUDgWBlb6+u/WSXy6YkwdoviJXH88lmT
+        t85wJAsos4DEkqpn00BbUyfDbJ6Vk9vDCWs3KL4nAoGBANjnt0IyfSxsgX9QHtNy
+        KAhJCa/XqX/46M+RNSkxh9y647zCiFq2MZ+m86COcg5V9wfeXsGG/Jn1LnLfpyQx
+        rx2YP2GaXakw5ukPqcSglcpstfKKziV66JUi5y8/8yGQ4joSQbsJMKXcsytXnxmF
+        psGk3l74oE6l1faEpwSKo+tRAoGAOZJP/ag23JhD8Es2UtNoTx3eKp3qw/wEOpZj
+        jml2sSbiUivC0j0j1tnUMoxv2d7klPsw57SbuWKc7b14sfiv9qb9dSMdZ8K6+iH5
+        nUfrxsXUsVYZJ3bamh8kLEHRZkC33ThL2ANySJoDzzT8HPvr6tiKCV9z+5B+Mpff
+        HD+336kCgYBU3Hn7JCGIXJWqf0PaO6TXhqwliMx84OI/1mcwyksBXxH9phhnEzPp
+        H2RGiqI81itYjOo6i5d54NWUkTp21TPrM/YGGa/aiUV4JAehbOylwS7Njj90gz5Q
+        2QNszbyfzLBNn3hchIK3UopT45GHX2c2Vvq3/sXkwBXNMflUMQkeQQ==
+        -----END RSA PRIVATE KEY-----
+      publicKey: -----BEGIN PUBLIC KEY-----
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvul5CPaFimvlp7ebf3k7
+        lN+pfHwz9puqhPTake+luZ7bnjKtqwyyKZllkNoiAMaxVjXM2tXhivQ95KfTZmOI
+        TOEiZ2OuicR4PW70z+4gMnsBL4++1CMi4xMLt1oPzA4ITddpJ/xYP96pJYTZr57+
+        wgd0XlKwID6b4FEexu9FyO7EraeP44wDvpBCf2i4XDBs2bszceHnOKT/cnU3cIkX
+        vo03QtPpROEFJlWZHffnZ+V+tBRC0/j2v7TkUiGogXBUZOnsVuBwP4uiPa69nlUD
+        NeZllaZlo4Sox/ZCZ1K6Sgh4y62vUcXIhEPjy89nZ6S3u5RVKJvfZ3xXLIPmRAXo
+        XwIDAQAB
+        -----END PUBLIC KEY-----
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    instance:
+      lease-renewal-interval-in-seconds: 1 #sends heartbeat every 1 second
+    serviceUrl:
+      defaultZone: http://192.168.1.5:8761/eureka/ #where our registry server is located
+    registerWithEureka: true #tells the built-in eureka client to not register itself with eureka, because we should act as a server
+    fetchRegistry: true
+
+
+  # mysql datasource
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/mantraerpdb?useUnicode=true&characterEncoding=UTF-8
+#    username: root
+#    password:
+#  jpa:
+#    properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#    hibernate:
+#      ddl-auto: update
+#      naming:
+#        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#    generate-ddl: true
+#    show-sql: true
+
+
+
+
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://auth-service/uaa/users/current #which uri will be used to find the user
+
+
+opentracing:
+  jaeger:
+    udp-sender:
+      host: 192.168.1.5
+      port: 6831
+    http-sender:
+      url: http://192.168.1.5:6831/api/traces

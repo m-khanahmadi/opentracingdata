@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: gateway-service
+
+management:
+  endpoint:
+    routes:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+server:
+  port: 8790
+

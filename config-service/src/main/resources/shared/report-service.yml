@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: finance-data-service
+server:
+  port: 9093
+
+
+

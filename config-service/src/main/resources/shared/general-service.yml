@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: finance-business-service
+server:
+  port: 9092
+
+
+
