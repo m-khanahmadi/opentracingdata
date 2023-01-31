@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: auth-service
+  cloud:
+    config:
+      uri: http://192.168.1.5:8888
+      fail-fast: true
+      password:
+      username:
+opentracing:
+  jaeger:
+    udp-sender:
+      host: 192.168.1.2
+      port: 6831
+    http-sender:
+      url: http://192.168.100.33:6831/api/traces
+
+
+
+
+
