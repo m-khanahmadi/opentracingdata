@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: finance-service
+  cloud:
+    config:
+      uri: http://192.168.1.5:8888
+      fail-fast: true
+      password: 
+      username: 
+  main:
+    allow-bean-definition-overriding: true
+
+
+
+
+
