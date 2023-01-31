@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: finance-data-service
+  cloud:
+    config:
+      uri: http://192.168.1.5:8888
+      fail-fast: true
+      password: 1234
+      username: user
+  main:
+    allow-bean-definition-overriding: true
+opentracing:
+  jaeger:
+    udp-sender:
+      host:
+
+
+
+

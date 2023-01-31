@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: report-service
+  cloud:
+    config:
+      uri: http://192.168.1.5:8888
+      fail-fast: true
+      password: 
+      username: 
+  main:
+    allow-bean-definition-overriding: true
+opentracing:
+  jaeger:
+    udp-sender:
+      host:
+
+
+
+
