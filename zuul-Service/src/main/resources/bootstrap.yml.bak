@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: zuul-service
+  cloud:
+    config:
+      uri: http://138.201.251.25:8888
+      fail-fast: true
+      password: 1234
+      username: user
+
+zuul:
+  routes:
+    farapayesh-service:
+      sensitive-headers: Cookie,Set-Cookie
+    auth-service:
+      sensitive-headers: Cookie,Set-Cookie
+    migration-subject-service:
+      sensitive-headers: Cookie,Set-Cookie
+    migration-subjectw-service:
+      sensitive-headers: Cookie,Set-Cookie
+    migration-messages-service:
+      sensitive-headers: Cookie,Set-Cookie
+    migration-attachment-service:
+      sensitive-headers: Cookie,Set-Cookie
+    migration-attachmentw-service:
+      sensitive-headers: Cookie,Set-Cookie
+
+ribbon:
+  ConnectTimeout: 160000
+  ReadTimeout: 160000
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000
+      maximumSize: 10000
+      queueSizeRejectionThreshold: -1
+      maxQueueSize: -1
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 16000000
+
